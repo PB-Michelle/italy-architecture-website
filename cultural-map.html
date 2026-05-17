@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="cultural_map_page" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Map - Living architecture: Italy</title>
+    <meta name="description" content="Interactive cultural map of Italy showcasing monuments like the Tower of Pisa, with historical context, fun facts, and accessible design for all users.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="cultural_map_page">
+    <!--Header-->
+    <header class="header_cultural_map">
+        <div class="logo">
+            <img src="images/cultural_map/Main figure.png" alt="logo"  fetchpriority="high">
+        </div>
+
+        <h1 id="mapMainTitle">Cultural Map</h1>
+
+        <!--Menu-->
+        <nav class="menu_container" aria-label="Main navigation">
+            <input type="checkbox" id="menu_desplegable">
+            <label for="menu_desplegable" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        
+        <!--Dropdown-->
+            <div class="menu" id="menu">
+                <ul>
+                    <li><a id="menuMainLink" href="main-page.html">Main page</a></li>
+                    <li><a id="menuTimelineLink" href="timeline.html" >Timeline</a></li>
+                    <li><a id="menuMapLink" href="cultural-map.html"  aria-current="page">Cultural map</a></li>
+                    <li><a id="English" href="#English" class="lang" data-lang="en">English</a></li>   
+                    <li><a id="Spanish" href="#Spanish" class="lang" data-lang="es">Spanish</a></li>             
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Main section(map)-->
+    <main>
+        <section class="interactive_map" aria-labelledby="map-title">
+            <h2 class="map-title">Interactive Cultural Map of Italy</h2>
+
+            <div class="map">
+                <img src="images/cultural_map/Slueta Italia.png" alt="Italy Map" class="map_image">
+
+                <!--Cities-->
+                <button id="Pisa" class="city-point pisa active" data-city="pisa">Pisa</button>
+                <button id="Rome" class="city-point rome" data-city="rome">Rome</button>
+                <button id="Florence" class="city-point florence" data-city="florence">Florence</button>
+                <button id="Venice" class="city-point venice" data-city="venice">Venice</button>
+                <button id="Milan" class="city-point milan" data-city="milan">Milan</button>
+                <button id="Naples" class="city-point naples" data-city="naples">Naples</button>
+                <button id="Palermo" class="city-point palermo" data-city="palermo">Palermo</button>
+
+            <!--Pisa Info. Box-->
+                <div class="pisa-info-box" id="cityBox">
+                    <img id="cityImage" src="images/cultural_map/Torre de Pisa.jpeg" alt="Tower of Pisa" class="info-image">
+                    <h3 id="cityName">Tower of Pisa</h3>
+                    <p id="cityText">Built as the bell tower of the cathedral in the Campo dei Miracoli, it began to tilt as early as the third floor due to unstable ground. Standing nearly 56 meters tall and clad in white marble, it is a symbol of Romanesque architecture and Italian resilience, having survived centuries of restoration attempts. Today, recognized as a UNESCO World heritage Site, it continues to fascinate millions of visitors each year.</p>
+                </div>
+            </div>
+            <div class="fun_facts_pisa_tower">
+                <h3 id="cityTitle">Fun Facts</h3>
+                <ul id="cityFacts">
+                    <li>Pisa is not just about the tower: the Campo dei Miracoli also included the Cathedral, The Baptistery, and the monumental Cemetery, forming a unique architectural ensemble.</li>
+                    <li>In the Middel Ages, Pisa was a powerful martime republic, rivaling Venice and Genoa; its wealth financed the grear works that still amaze visitors today.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+        <!--Footer-->
+    <footer>
+        <div class="footer_columns">
+            <div class="footer-left">
+                <h3 id="createdByTitle">Created by:</h3>
+                <p>Michelle Portilla Bejarano</p>
+                <p id="credits" class="bottom">
+                    &copy; 2026 Living Architecture: Italy</p>
+            </div>
+            <div>
+                <h3 id="discoverTitle">Discover:</h3>
+                <nav>
+                    <ul>
+                        <li><a id="mainLink1" href="main-page.html">Main page</a></li>
+                        <li><a id="timelineLink1" href="timeline.html">A timeline</a></li>
+                        <li><a id="mapLink1" href="cultural-map.html" aria-current="page">Interactive cultural map</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

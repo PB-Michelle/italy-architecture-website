@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline - Living architecture: Italy</title>
+    <meta name="description" content="Explore the historical timeline of Italian architecture, from the Roman Republic to the Empire, with monuments, temples, and cultural landmarks explained in detail.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="Timeline_page">
+    <!--Header-->
+    <header>
+        <div class="logo">
+            <img src="images/timeline/Icono columna romana.png" alt="logo" fetchpriority="high">
+        </div>
+        
+        <h1 id="timelineMainTitle">Timeline</h1>
+
+        <!--Menu-->
+        <nav class="menu_container" aria-label="Main navigation">
+            <input type="checkbox" id="menu_desplegable">
+            <label for="menu_desplegable" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <!--Dropdown-->
+            <div class="menu" id="menu">
+                <ul>
+                    <li><a id="menuMainLink" href="main-page.html">Main page</a></li>
+                    <li><a id="menuTimelineLink" href="timeline.html" aria-current="page">Timeline</a></li>
+                    <li><a id="menuMapLink" href="cultural-map.html">Cultural map</a></li>
+                    <li><a id="English" href="#English" class="lang" data-lang="en">English</a></li>   
+                    <li><a id="Spanish" href="#Spanish" class="lang" data-lang="es">Spanish</a></li>            
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Main pictures (scroll)-->
+    <main>
+        <section class="timeline_scroll">
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="carouselTrack">
+
+                    <div class="slide"><img src="images/timeline/Panteon de Roma.png"></div>
+                    <div class="slide"><img src="images/timeline/Catedral de Siena.png"></div>
+                    <div class="slide"><img src="images/timeline/Basilica de San Pedro.png"></div>
+                    <div class="slide"><img src="images/timeline/Palacio de Caserta.png"></div>
+                    <div class="slide"><img src="images/timeline/Palacio Stupinigi.png"></div>
+                    <div class="slide"><img src="images/timeline/Galleria Vittorio Emanuele II.png"></div>
+                    <div class="slide"><img src="images/timeline/Palazzo della Civiltà Italiana.png"></div>
+                    <div class="slide"><img src="images/timeline/Bosco Verticale Milan.png"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info1BC">
+            <h2 id="timelineTitle">1st B.C - 1100s</h2>
+
+            <p id="timelineText">More than a temple, the <b>Pantheon of Rome</b> embodies the ambition of ancient Rome during its transition from Republic to Empire.</p>
+        </section>
+
+        <!--Timeline-->
+        <section class="timeline-bar">
+            <div class="timeline-track">
+                <div class="timeline-point">
+                    <div class="circle"></div>
+                    <div class="label" id="year1">1st B.C</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="circle"></div>
+                    <div class="label" id="year2">1100s</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="circle"></div>
+                    <div class="label" id="year3">1400s</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="circle"></div>
+                    <div class="label" id="year4">1580s</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="circle"></div>
+                    <div class="label" id="year5">1730s</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="circle"></div>
+                    <div class="label" id="year6">1750s</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="circle"></div>
+                    <div class="label" id="year7">1920s</div>
+                </div>
+                <div class="timeline-point">
+                    <div class="circle"></div>
+                    <div class="label" id="year8">1950s</div>
+                </div>
+                <div class="timeline-arrow"></div>
+            </div>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer class="timeline_footer">
+        <div class="footer_columns">
+            <div class="footer-left">
+                <h3 id="createdByTitle">Created by:</h3>
+                <p>Michelle Portilla Bejarano</p>
+                <p id="credits" class="bottom">
+                    &copy; 2026 Living Architecture: Italy</p>
+            </div>
+            <div>
+                <h3 id="discoverTitle">Discover:</h3>
+                <nav>
+                    <ul>
+                        <li><a id="mainLink1" href="main-page.html">Main page</a></li>
+                        <li><a id="timelineLink1" href="timeline.html" aria-current="page">A timeline</a></li>
+                        <li><a id="mapLink1" href="cultural-map.html">Interactive cultural map</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

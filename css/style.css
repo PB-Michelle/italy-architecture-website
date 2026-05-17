@@ -1,0 +1,1202 @@
+/*General*/
+
+:root {
+    font-size: 16px;
+
+    --fs-h1: clamp(2.5rem, 7vw, 3.5rem);
+    --fs-h2: clamp(1.5rem, 3vw, 2.2rem);
+    --fs-h3: clamp(1.6rem, 2.8vw, 2rem);
+    --fs-body: clamp(0.95rem, 1.2vw, 1.1rem);
+}
+
+body {
+    margin: 0;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+
+body .main-page {
+    background-color: #F2F0E6;
+}
+
+/*Text Settings*/
+
+h1 {
+    flex: 1;
+    text-align: center;
+    font-family: 'Playfair Display';
+    font-weight: 500;
+    font-style: italic;
+    font-size: var(--fs-h1);
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(0, 0, 0, 0.75);
+    font-size: 1.5rem;
+}
+
+/*Header*/
+header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 0;
+    margin: 0 4%;
+    color: #A1760D;
+    gap: 1rem;
+}
+
+header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    text-align: center;
+    width: max-content;
+}
+
+.header-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex: 1;
+}
+
+.logo {
+    flex: 0 0 15%;
+}
+.logo img {
+    max-width: 12vw;
+    height: auto;
+    opacity: 90%;
+}
+
+header a {
+    text-decoration: none;
+    font-family: 'Playfair Display';
+    font-weight: 100;
+    color: #A1760D;
+
+}
+
+header ul li {
+    list-style: none;
+}
+
+nav {
+    flex: 0 0 40%;
+}
+
+/*Menu Settings*/
+.menu_container {
+    position: relative;
+    display: flex;
+    flex: 0 0 auto;
+    width: 7%;
+}
+
+#menu_desplegable {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 1.5rem;
+    height: 0.25rem;
+    margin: 0.4rem;
+    background:#A1760D;
+    border-radius: 12.5%;
+    transition: 0.4s;
+}
+
+.menu {
+    position: absolute;
+    width: 20vw;
+    top: 100%;
+    right: 0;
+    background: rgba(242, 240, 230, 0.95);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    border-radius: 6%;
+    box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/*Menu Dropdown*/
+#menu_desplegable:checked ~ .menu {
+    max-height: 50vw;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 5%;
+    width: 100%;
+}
+
+.menu ul li {
+    flex: 1;
+}
+
+.menu ul li a {
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding: 0.5vw;
+    color: #A1760D;
+}
+
+.menu-icon:focus-visible {
+    outline: 3px solid #A1760D;
+    outline-offset: 4px;
+}
+
+/*Excepción Timeline*/
+.Timeline_page .menu-icon:focus-visible {
+    outline: 3px solid #a63e10;
+    outline-offset: 4px;
+}
+
+/*Main text (header)*/
+.main_text {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+.main_text .main_content{
+    justify-content: center;
+    align-items: center;
+    display: block;
+    text-align: center;
+    font-style: normal;
+    margin: 3%;
+    margin-top: 0px;
+}
+
+.main_text .btn {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    margin: 2%;
+    border: 0.4vw solid #A1760D;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+    padding: 1%;
+    border-radius: 1.5vw;
+    text-decoration: none;
+}
+
+.main_text .btn:hover {
+    background: #A1760D;
+    color: #fff;
+}
+
+/*Main Scroll*/
+.horizontal-scroll {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    overflow-y: hidden;
+    width: 100vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* Edge */
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
+}
+
+.scroll {
+    flex: 0 0 100vw;
+    color: #F2F0E6;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    border-top: 1vw solid #A1760D;
+    border-bottom: 1vw solid #A1760D;
+    scroll-snap-align: start;
+    position: relative;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #F2F0E6;
+    font-size: var(--fs-h2);
+}
+
+.scroll h2 {
+    font-size: clamp(1rem, 1.6vw, 1.3rem);
+    text-align: center;
+    max-width: 80%;
+}
+.horizontal-scroll a{
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+}
+
+.btn_scroll {
+    background: transparent;
+    color: #F2F0E6;
+    padding: 1% 2%;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    margin-bottom: 4%;
+}
+
+.arrow {
+    position: absolute;
+    top: 45%;
+    right: 4%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 8vw;
+    font-weight: regular;
+    color: #A1760D;
+    text-shadow: 1px 1px 3px rgb(17, 15, 15);
+    text-decoration: none;
+    transition: transform 0.3s;
+    transform: scale(1.6);
+    display: inline-block;
+    box-shadow: 0 2rem 8rem rgba(0, 0, 0, 1);
+}
+
+.arrow:hover {
+    transform: scale(2.3);
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background: rgb(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/*Footer*/
+h3 {
+    font-family: 'Playfair Display';
+    font-weight: 500;
+    font-style: normal;
+    font-size: var(--fs-h3);
+}
+
+footer p {
+    font-size: 1.5rem;
+    margin-bottom: 12%;
+}
+
+.footer_columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer a {
+    color:rgb(0, 0, 0, 0.75);
+    text-decoration: none;
+}
+
+footer ul {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+footer ul li {
+    margin-bottom: 18%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    list-style: none;
+}
+
+footer {
+    border-bottom: 1vw solid #A1760D;
+}
+
+/*Timeline_page Settings*/
+.Timeline_page header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    color: #a63e10;
+}
+
+.Timeline_page h1 {
+    margin-bottom: 0px;
+}
+
+.Timeline_page a {
+    color: #a63e10;
+}
+
+.Timeline_page span {
+    background: #a63e10;
+}
+.Timeline_page .menu ul li a {
+    color: #a63e10;
+}
+
+.timeline_scroll {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1vw solid #a63e10;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform .7s ease;
+}
+
+.slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.slide img {
+    width: min(85vw, 620px);
+    max-height: 520px;
+    object-fit: contain;
+    opacity: .35;
+    filter: blur(1px);
+    transition: .5s;
+}
+
+.slide.active img {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1.02);
+}
+
+@media(max-width:768px) {
+    .slide img{
+        width:92vw;
+        max-height:380px;
+    }
+}
+
+.Timeline_page .info1BC {
+    color: #a63e10;
+    display: contents;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 4rem;
+}
+
+.info1BC h2 {
+    flex: 1;
+    text-align: center;
+    font-family: 'Playfair Display';
+    font-weight: 500;
+    font-style: italic;
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    color: #a63e10;
+    padding: 0;
+    margin: 0;
+}
+
+.info1BC p {
+    color: black;
+    margin-top: 0;
+    padding-top: 0p;
+    padding: 2.5rem;
+    text-align: justify;
+}
+
+/*Timeline Page Interactivity*/
+.timeline-bar {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    padding: 0 0 3rem 0;
+    border-bottom: 1vw solid #a63e10
+}
+
+.timeline-track {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    padding: 0 2vw;
+}
+
+.timeline-track::before {
+    content: "";
+    position: absolute;
+    top: 0.75rem;
+    left: calc(6.5%);
+    right: calc(3%);
+    height: 0.3rem;
+    background-color: #a63e10;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.timeline-point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 2vw;
+    z-index: 1;
+    position: relative;
+}
+
+.circle {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #a63e10;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.circle:focus-visible {
+    outline: 3px solid black;
+    transform: scale(1.4);
+}
+
+.circle.active {
+    background-color: darkred;
+    transform: scale(1.4);
+}
+
+.timeline-arrow {
+    width: 0;
+    height: 0;
+    top: -1rem;
+    border-left: 1.5rem solid #a63e10;
+    border-top: 0.8rem solid transparent;
+    border-bottom: 0.8rem solid transparent;
+    align-self: center;
+    position: relative;
+    z-index: 2;
+}
+
+.label {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #a63e10;
+    font-family: 'Playfair Display', serif;
+}
+/*-Footer*/
+
+.timeline_footer {
+    border-bottom: 1vw solid #a63e10;
+}
+
+.Timeline_page footer a {
+    color: rgb(0, 0, 0, 0.75);
+}
+
+/*Cultural Map_page Settings*/
+
+html .cultural_map_page, 
+body .cultural_map_page {
+    background-color: #3C5118;
+
+}
+
+.cultural_map_page header.header_cultural_map {
+    color: #D19912;
+    background-color: #3C5118;
+}
+
+header.header_cultural_map a {
+    color: #D19912;
+}
+
+.header_cultural_map span {
+    background: #b8860b;
+}
+
+/*Interactive Map Settings*/
+.map-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+}
+
+.interactive_map {
+    position: relative;
+    background-color: #3C5118;
+    border-bottom: 1vw solid #D19912;
+}
+
+.map {
+    position: relative;
+    width: min(95vw, 1400px);
+    margin: auto;
+}
+
+.map_image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.city-point{
+    position:absolute;
+    transform:translate(-50%,-50%);
+    border:none;
+    border-radius:999px;
+    background:#D19912;
+    color:#3C5118;
+    font-weight:700;
+    padding: clamp(3px, 0.6vw, 10px) clamp(6px, 1vw, 16px);
+    cursor:pointer;
+    font-family:'Playfair Display';
+    font-size: clamp(8px, 1vw, 18px);
+    transition:.3s;
+    z-index:10;
+}
+
+.city-point:hover{
+    transform:translate(-50%,-50%) scale(1.08);
+}
+
+.city-point:focus-visible {
+    transform: translate(-50%, -50%) scale(1.1);
+    outline: 2px solid #fff;
+}
+
+.city-point.active{
+    background:#3C5118;
+    color:#F2F0E6;
+}
+
+.pisa{
+    left:32%;
+    top:32%;
+}
+
+.rome{
+    left:49%;
+    top:48%;
+}
+
+.florence{
+    left:40%;
+    top:29%;
+}
+
+.venice{
+    left:44%;
+    top:15%;
+}
+
+.milan{
+    left:24%;
+    top:15%;
+}
+
+.naples{
+    left:63%;
+    top:55%;
+}
+
+.palermo{
+    left:53%;
+    top:79%;
+}
+
+.cultural_map_page footer {
+    background-color: #F2F0E6;
+}
+
+/*Info. Tower of Pisa*/
+.pisa-info-box {
+    top: 40%;
+    left: 4%;
+    width: 390px;
+    max-width: 80%;
+    position: absolute;
+    background: rgba(255,255,255,0.9);
+    border: 4px solid #D19912;
+    border-radius: 8px;
+    padding: 0.93rem;
+    width: 390px;
+    font-family: 'Playfair Display', serif;
+    color: #3C5118;
+}
+
+
+.pisa-info-box p {
+    font-size: 18px;
+    text-align: center;
+    color: #3C5118;
+}
+
+.pisa-info-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0.62rem;
+}
+
+.pisa-info-box h3 {
+    justify-content: center;
+    text-align: center;
+}
+
+.pisa-info-box.info-image {
+    height: 20px;
+    border-bottom: 2px solid #D19912;
+    margin-bottom: 0.62rem;
+}
+
+.fun_facts_pisa_tower h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.fun_facts_pisa_tower {
+    top: 10%;
+    right: 4%;
+    position: absolute;
+    background: rgba(255,255,255,0.9);
+    border: 4px solid #D19912;
+    border-radius: 8px;
+    padding: 0.1rem 1rem 0.8rem 0.5rem;
+    width: 220px;
+    font-family: 'Playfair Display', serif;
+    color: #3C5118;
+    text-align: center;
+}
+
+.fun_facts_pisa_tower ul li {
+    text-align: left;
+    font-style: normal;
+}
+
+/*Cultural Map Footer*/
+.cultural_map_page footer {
+    border-bottom: 1vw solid #D19912;
+}
+
+/*Main page - General Settings - Media Queries <576px*/
+@media (max-width: 576px) {
+    /*Header*/
+    header {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    /*Logo*/
+    .logo {
+        display: none;
+    }
+
+    /*Título*/
+    h1 {
+        flex: 0 0 auto;
+        text-align: center;
+        font-size: 7vw;
+        margin: 2% 0;
+    }
+    /*Menu*/
+    .menu_container {
+        width: 100%;
+        background-color: #A1760D;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 4%;
+    }
+    .Timeline_page .menu_container {
+        background-color: #a63e10;
+    }
+    .cultural_map_page .menu_container {
+        background-color: #A1760D;
+    }
+    .menu-icon {
+        margin-right: 1rem;
+    }
+    .menu-icon span {
+        width: 1.5rem;
+        background: #F2F0E6;
+        margin: 0.4rem;
+    }
+    .Timeline_page .menu-icon span {
+        background: #F2F0E6;
+    }
+    .header_cultural_map span {
+    background: #F2F0E6;
+    }
+    .menu {
+        width: 35%;
+        right: 0;
+    }
+    .menu ul li a {
+        display: block;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        padding: 0.8rem; /* antes 0.5vw */
+        color: #A1760D;
+    }
+    .Timeline_page .menu ul li a {
+        color: #a63e10;
+    }
+    
+    /*Main text*/
+    p {
+        font-size: 1.1rem;
+    }
+    .main_text .btn {
+        font-size: 1.1rem;
+    }
+
+    /*Main Scroll*/
+    .horizontal-scroll {
+        width: 100vw;
+        height: 65vw;
+    }
+    .scroll {
+        width: 100vh;
+        height: auto;
+    }
+    h2 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    .horizontal-scroll a {
+        font-size: 1.1rem;
+    }
+    .arrow {
+        transform: scale(2.5);
+    }
+    .arrow:hover {
+        transform: scale(3.5);
+    }
+
+    /*Footer*/
+    h3 {
+        font-size: 4.8vw;
+        padding: 3% 3% 0 0;
+    }
+    footer p {
+        font-size: 1.1rem;
+        padding: 3% 3% 0 0;
+    }
+    footer ul li {
+        font-size: 1.1rem;
+        padding: 3% 3% 0 0;
+    }
+        /*Media Queries Cultural Map*/
+    .interactive_map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: static;
+    }
+    .map {
+        width: 100%;
+        margin:0;
+    }
+    .map_image {
+        width: 100%;
+        height: auto;
+    }
+    .pisa {
+        left: 32%;
+        top: 17%;
+    }
+    .rome {
+        left:49%;
+        top:24%;
+    }
+    .florence {
+        left:40%;
+        top:15%;
+    }
+    .venice {
+        left:44%;
+        top:7%;
+    }
+    .milan {
+        left:24%;
+        top:8%;
+    }
+    .naples {
+        left:63%;
+        top:27%;
+    }
+    .palermo {
+        left:53%;
+        top:40%;
+    }
+    .pisa-info-box {
+        position: static;
+        width: 90%;
+        margin: 1rem auto;
+        left: auto;
+        top: auto
+    }
+    .fun_facts_pisa_tower {
+        position: static;
+        width: 90%;
+        margin: 1rem auto;
+        top: auto;
+        right: auto;
+    }
+}
+
+/*Main page - General Settings - Media Queries >576px*/
+@media (min-width: 577px)  and (max-width: 767px){
+    /*Header*/
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+        gap: 1rem;
+    }
+    .header-top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        padding: 1% 4%;
+    }
+
+    /*Logo*/
+    .logo {
+        flex: 0 0 auto;
+    }
+    .logo img {
+        max-width: 17vw;
+        height: auto;
+    }
+    header h1 {
+        flex: 1;
+        text-align: center;
+        font-size: 6.5vw;
+        margin: 0;
+    }
+
+    /*Main text*/
+    p {
+        font-size: 1.2rem;
+    }
+    .main_text .btn {
+        font-size: 1.2rem;
+    }
+    
+    /*Menu*/
+    .menu_container {
+        width: 100%;
+        background-color: #A1760D;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0.5% 2%;
+    }
+    .menu-icon {
+        margin-right: 1.5rem;
+    }
+    .cultural_map_page .menu-icon span {
+        background: #F2F0E6;
+        width: 1.6rem;
+        height: 0.18rem;
+        margin: 0.4rem;
+    }
+    .menu {
+        width: 32%;
+        right: 0;
+    }
+    .menu ul li a {
+        font-size: 1.5rem;
+    }
+
+    /*Main Scroll*/
+    h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .horizontal-scroll a {
+        font-size: 1.2rem;
+    }
+    .arrow {
+        transform: scale(3);
+    }
+    .arrow:hover {
+        transform: scale(4);
+    }
+
+    /*Footer*/
+    h3 {
+        font-size: 4vw;
+    }
+    footer p {
+        font-size: 1.2rem;
+        padding: 1% 1% 0 0;
+    }
+    footer ul li {
+        font-size: 1.2rem;
+        padding: 1% 1% 0 0;
+    }
+
+    /*Media Queries Cultural Map*/
+    .interactive_map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: static;
+    }
+    .map {
+        width: 100%;
+        margin:0;
+    }
+    .map_image {
+        width: 100%;
+        height: auto;
+    }
+    .pisa {
+        left: 32%;
+        top: 17%;
+    }
+    .rome {
+        left:49%;
+        top:25%;
+    }
+    .florence {
+        left:40%;
+        top:15%;
+    }
+    .venice {
+        left:44%;
+        top:8%;
+    }
+    .milan {
+        left:24%;
+        top:8%;
+    }
+    .naples {
+        left:63%;
+        top:29%;
+    }
+    .palermo {
+        left:53%;
+        top:42%;
+    }
+    .pisa-info-box {
+        position: static;
+        width: 90%;
+        margin: 1rem auto;
+        left: auto;
+        top: auto
+    }
+    .fun_facts_pisa_tower {
+        position: static;
+        width: 90%;
+        margin: 1rem auto;
+        top: auto;
+        right: auto;
+    }
+}
+
+/*Cultural map - Media Queries >576px - portrait*/
+@media (min-width: 577px)  and (max-width: 767px) and (orientation:portrait) {
+    .pisa {
+        left: 32%;
+        top: 20%;
+    }
+    .rome {
+        left:49%;
+        top:28%;
+    }
+    .florence {
+        left:40%;
+        top:18%;
+    }
+    .naples {
+        left:63%;
+        top:32%;
+    }
+    .palermo {
+        left:53%;
+        top:45%;
+    }
+}
+/*General Settings - Media Queries >768px*/
+@media (min-width: 768px)  and (max-width: 991px) and (orientation: portrait) {
+
+    /*Header*/
+    header {
+        margin: 0 2rem;
+        padding: 0;
+        gap: 1rem;
+    }
+    header h1 {
+        font-size: 6.8vw;
+    }
+
+    /*Main text*/
+    p {
+        font-size: 1.5rem;
+    }
+    .main_text .btn {
+        font-size: 1.5rem;
+    }
+    /*Main Scroll*/
+    .horizontal-scroll {
+        width: 100vw;
+        height: 65vw;
+    }
+    .scroll {
+        width: 100vh;
+        height: auto;
+    }
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0 3rem;
+    }
+    .horizontal-scroll a {
+        font-size: 1.5rem;
+    }
+    .arrow {
+        margin: 0 2rem;
+        transform: scale(2.5);
+    }
+
+    /*Footer*/
+    h3 {
+        font-size: 4.2vw;
+    }
+    footer p {
+        font-size: 1.5rem;
+    }
+    footer lu li {
+        font-size: 1.5rem;
+    }
+    /*Media Queries Cultural Map*/
+    .interactive_map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: static;
+    }
+    .map {
+        width: 100%;
+        margin:0;
+    }
+    .map_image {
+        width: 100%;
+        height: auto;
+    }
+    .pisa {
+        left: 32%;
+        top: 20%;
+    }
+    .rome {
+        left:49%;
+        top:28%;
+    }
+    .florence {
+        left:40%;
+        top:18%;
+    }
+    .venice {
+        left:44%;
+        top:8%;
+    }
+    .milan {
+        left:24%;
+        top:8%;
+    }
+    .naples {
+        left:63%;
+        top:32%;
+    }
+    .palermo {
+        left:53%;
+        top:45%;
+    }
+    .pisa-info-box {
+        position: static;
+        width: 90%;
+        margin: 1rem auto;
+        left: auto;
+        top: auto
+    }
+    .fun_facts_pisa_tower {
+        position: static;
+        width: 90%;
+        margin: 1rem auto;
+        top: auto;
+        right: auto;
+    }
+}
+
+/*General Settings - Media Queries <1200*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    /*Maing page*/
+    .scroll {
+        flex: 0 0 90vw;
+    }
+    .arrow {
+        font-size: 5vw;
+        transform: scale(1.4);
+}
+    footer h3 {
+        font-size: clamp(1.6rem, 2vw, 1.9rem);
+    }
+    .pisa-info-box {
+        max-width: 300px;
+        font-size: 0.9rem;
+    }
+}
+
+:focus-visible {
+outline: 3px solid #D19912;
+    outline-offset: 3px;
+}
+/*Timeline Focus*/
+.Timeline_page :focus-visible {
+outline: 3px solid #a63e10;
+    outline-offset: 3px;
+}
