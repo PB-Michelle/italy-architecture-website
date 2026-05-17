@@ -1062,113 +1062,51 @@ header.header_cultural_map a {
     }
 }
 /*General Settings - Media Queries >768px*/
-@media (min-width: 768px)  and (max-width: 991px) and (orientation: portrait) {
-
-    /*Header*/
-    header {
-        margin: 0 2rem;
-        padding: 0;
-        gap: 1rem;
+@media (min-width: 768px) and (max-width:991px) {
+    .Timeline_page header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-    header h1 {
+    .Timeline_page header h1 {
+        position: static;
+        transform: none;
+        left: auto;
+        width: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .Timeline_page .header-top {
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+    .Timeline_page .menu_container {
+        width: auto;
+        flex: 0 0 auto;
+    }
+}
+
+/*General Settings - Media Queries >768px - portrait orientation*/
+@media (min-width: 768px)  and (max-width: 991px) and (orientation: portrait) {
+    .Timeline_page header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .Timeline_page header h1 {
+        position: static;
+        transform: none;
+        left: auto;
+        width: auto;
+        margin: 0 auto;
+        text-align: center;
         font-size: 6.8vw;
     }
-
-    /*Main text*/
-    p {
-        font-size: 1.5rem;
-    }
-    .main_text .btn {
-        font-size: 1.5rem;
-    }
-    /*Main Scroll*/
-    .horizontal-scroll {
-        width: 100vw;
-        height: 65vw;
-    }
-    .scroll {
-        width: 100vh;
-        height: auto;
-    }
-    h2 {
-        font-size: 1.5rem;
-        text-align: center;
-        margin: 0 3rem;
-    }
-    .horizontal-scroll a {
-        font-size: 1.5rem;
-    }
-    .arrow {
-        margin: 0 2rem;
-        transform: scale(2.5);
-    }
-
-    /*Footer*/
-    h3 {
-        font-size: 4.2vw;
-    }
-    footer p {
-        font-size: 1.5rem;
-    }
-    footer lu li {
-        font-size: 1.5rem;
-    }
-    /*Media Queries Cultural Map*/
-    .interactive_map {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: static;
-    }
-    .map {
-        width: 100%;
-        margin:0;
-    }
-    .map_image {
-        width: 100%;
-        height: auto;
-    }
-    .pisa {
-        left: 32%;
-        top: 20%;
-    }
-    .rome {
-        left:49%;
-        top:28%;
-    }
-    .florence {
-        left:40%;
-        top:18%;
-    }
-    .venice {
-        left:44%;
-        top:8%;
-    }
-    .milan {
-        left:24%;
-        top:8%;
-    }
-    .naples {
-        left:63%;
-        top:32%;
-    }
-    .palermo {
-        left:53%;
-        top:45%;
-    }
-    .pisa-info-box {
-        position: static;
-        width: 90%;
-        margin: 1rem auto;
-        left: auto;
-        top: auto
-    }
-    .fun_facts_pisa_tower {
-        position: static;
-        width: 90%;
-        margin: 1rem auto;
-        top: auto;
-        right: auto;
+    .Timeline_page .menu_container {
+        width: auto;
+        flex: 0 0 auto;
     }
 }
 
