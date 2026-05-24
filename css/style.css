@@ -716,6 +716,9 @@ header.header_cultural_map a {
 
 /*Main page - General Settings - Media Queries <576px*/
 @media (max-width: 576px) {
+    body {
+    overflow-x: hidden;
+    }
     /*Header*/
     header {
         flex-direction: column;
@@ -728,6 +731,16 @@ header.header_cultural_map a {
     .logo {
         display: none;
     }
+
+    .main-page header h1 {
+        position: static;
+        transform: none;
+        left: auto;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
 
     /*Título*/
     h1 {
@@ -772,7 +785,7 @@ header.header_cultural_map a {
         display: block;
         font-size: 1.2rem;
         line-height: 1.6;
-        padding: 0.8rem; /* antes 0.5vw */
+        padding: 0.5rem;
         color: #A1760D;
     }
     .Timeline_page .menu ul li a {
@@ -789,12 +802,10 @@ header.header_cultural_map a {
 
     /*Main Scroll*/
     .horizontal-scroll {
-        width: 100vw;
-        height: 65vw;
+        width: 100%;
     }
     .scroll {
-        width: 100vh;
-        height: auto;
+        flex: 0 0 100%;
     }
     h2 {
         font-size: 1.1rem;
@@ -852,8 +863,16 @@ header.header_cultural_map a {
         display: none;
     }
     /*Media Queries Cultural Map*/
+    .cultural_map_page header h1 {
+        position: static;
+        transform: none;
+        left: auto;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
     .interactive_map {
-        display: flex;
+        display: relative;
         flex-direction: column;
         align-items: center;
         position: static;
@@ -868,31 +887,31 @@ header.header_cultural_map a {
     }
     .pisa {
         left: 32%;
-        top: 15%;
+        top: 16%;
     }
     .rome {
         left:49%;
-        top:22%;
+        top:25%;
     }
     .florence {
         left:40%;
-        top:12%;
+        top:14%;
     }
     .venice {
         left:44%;
-        top:6%;
+        top:7%;
     }
     .milan {
         left:24%;
-        top:7%;
+        top:8%;
     }
     .naples {
         left:63%;
-        top:25%;
+        top:29%;
     }
     .palermo {
         left:53%;
-        top:37%;
+        top:41%;
     }
     .pisa-info-box {
         position: static;
