@@ -404,7 +404,7 @@ footer {
     transform: scale(1.02);
 }
 
-@media(max-width:768px) {
+@media(max-width: 768px) {
     .slide img{
         width:92vw;
         max-height:380px;
@@ -823,7 +823,35 @@ header.header_cultural_map a {
         font-size: 1.1rem;
         padding: 3% 3% 0 0;
     }
-        /*Media Queries Cultural Map*/
+    /*Media Queries Timeline*/
+    .Timeline_page header {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+        margin: 0;
+    }
+
+    .Timeline_page .menu_container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0.2rem 0.6rem;
+        background-color: #a63e10;
+    }
+    .Timeline_page header h1 {
+        position: static;
+        transform: none;
+        left: auto;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .Timeline_page .logo {
+        display: none;
+    }
+    /*Media Queries Cultural Map*/
     .interactive_map {
         display: flex;
         flex-direction: column;
@@ -937,11 +965,8 @@ header.header_cultural_map a {
     .menu-icon {
         margin-right: 1.5rem;
     }
-    .cultural_map_page .menu-icon span {
-        background: #F2F0E6;
-        width: 1.6rem;
-        height: 0.18rem;
-        margin: 0.4rem;
+    .main-page .menu_container span {
+        background-color: #F2F0E6;
     }
     .menu {
         width: 32%;
@@ -978,8 +1003,65 @@ header.header_cultural_map a {
         font-size: 1.2rem;
         padding: 1% 1% 0 0;
     }
+    /*Media Queries CTimeline*/  
+    .Timeline_page header {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+    .Timeline_page header h1 {
+        position: absolute;   
+        left: 50%;
+        transform: translate(-50%, -50%);   
+        margin: 0 auto;         
+        white-space: nowrap;
+    }
+    .Timeline_page .menu_container {
+        width: 100%;
+        background-color: #a63e10;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0.5% 2%;
+    }
+    .Timeline_page .menu_container span {
+        background-color: #F2F0E6;
+    }
+        .Timeline_page .logo {
+        z-index: 1;      
+    }
+    .Timeline_page header h1 {
+            order: 2;
+    }
 
     /*Media Queries Cultural Map*/
+    .cultural_map_page header {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+    .cultural_map_page header h1 {
+        position: absolute;   
+        left: 50%;
+        transform: translate(-50%, -50%);   
+        margin: 0 auto;         
+        white-space: nowrap;
+    }
+    .cultural_map_page .menu-icon span {
+        background: #F2F0E6;
+        width: 1.6rem;
+        height: 0.18rem;
+        margin: 0.4rem;
+    }
     .interactive_map {
         display: flex;
         flex-direction: column;
@@ -1000,7 +1082,7 @@ header.header_cultural_map a {
     }
     .rome {
         left:49%;
-        top:25%;
+        top:26%;
     }
     .florence {
         left:40%;
@@ -1016,11 +1098,11 @@ header.header_cultural_map a {
     }
     .naples {
         left:63%;
-        top:29%;
+        top:30%;
     }
     .palermo {
         left:53%;
-        top:42%;
+        top:43%;
     }
     .pisa-info-box {
         position: static;
